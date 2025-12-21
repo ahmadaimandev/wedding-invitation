@@ -1,0 +1,41 @@
+/* Thank You Page Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fefae0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.thank-you-card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.icon {
+    font-size: 5rem;
+    color: #d4a373;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.btn-home {
+    background-color: #d4a373;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    font-weight: 600;
+}

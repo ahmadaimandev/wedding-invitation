@@ -1,0 +1,177 @@
+/* Premium RSVP Styles */
+:root {
+    --primary-color: #bfa181;
+    --primary-dark: #8c7356;
+    --text-color: #555;
+    --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg-gradient);
+    overflow-x: hidden;
+    color: var(--text-color);
+}
+
+/* Background Shapes */
+.bg-shape-1,
+.bg-shape-2 {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.bg-shape-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(191, 161, 129, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    top: -200px;
+    right: -200px;
+}
+
+.bg-shape-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(140, 115, 86, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    bottom: -150px;
+    left: -150px;
+}
+
+/* Container */
+.rsvp-container {
+    max-width: 900px;
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 40px auto;
+}
+
+/* Left Side Image */
+.rsvp-image {
+    background: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    min-height: 500px;
+}
+
+.rsvp-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 44, 44, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+.font-script {
+    font-family: 'Great Vibes', cursive;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+/* Form Styles */
+.rsvp-form-wrapper {
+    position: relative;
+}
+
+.rsvp-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: #2c2c2c;
+}
+
+.sub-title {
+    color: var(--primary-color);
+}
+
+.btn-close-custom {
+    color: #aaa;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.btn-close-custom:hover {
+    color: var(--primary-color);
+}
+
+/* Floating Labels Override */
+.form-floating>.form-control,
+.form-floating>.form-select {
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.form-floating>.form-control:focus,
+.form-floating>.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(191, 161, 129, 0.1);
+    background-color: #fff;
+}
+
+.form-floating>label {
+    color: #999;
+}
+
+/* Custom Radio Buttons */
+.btn-outline-custom {
+    border: 2px solid #eee;
+    color: #888;
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+
+.btn-check:checked+.btn-outline-custom {
+    border-color: var(--primary-color);
+    background-color: rgba(191, 161, 129, 0.08);
+    color: var(--primary-dark);
+}
+
+.btn-outline-custom:hover {
+    border-color: #ddd;
+    background-color: #fcfcfc;
+}
+
+/* Submit Button */
+.btn-primary-custom {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary-custom:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(191, 161, 129, 0.4) !important;
+}
+
+.hover-lift {
+    transition: transform 0.3s;
+}
+
+.hover-lift:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 991px) {
+    .rsvp-image {
+        min-height: 200px;
+    }
+
+    .rsvp-container {
+        margin: 20px auto;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,278 @@
+/* admin/assets/css/admin-style.css */
+:root {
+    --primary: #bfa181;
+    --dark: #2c2c2c;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar Styling */
+.main-sidebar {
+    background-color: #ffffff !important;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.03) !important;
+}
+
+.nav-sidebar .nav-link {
+    border-radius: 12px;
+    margin: 5px 10px;
+    color: #555 !important;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.nav-sidebar .nav-link:hover {
+    background-color: rgba(191, 161, 129, 0.1) !important;
+    color: var(--primary) !important;
+}
+
+.nav-sidebar .nav-link.active {
+    background-color: var(--primary) !important;
+    color: white !important;
+    box-shadow: 0 5px 15px rgba(191, 161, 129, 0.3);
+}
+
+.brand-link {
+    border-bottom: 1px solid #f0f0f0 !important;
+    padding: 1.5rem 1rem !important;
+}
+
+.brand-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700 !important;
+    color: var(--dark) !important;
+    font-size: 1.4rem;
+}
+
+/* Header/Navbar Enhancements */
+.main-header {
+    border-bottom: 1px solid #f0f0f0 !important;
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-nav .nav-item {
+    margin: 0 5px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 0.8rem !important;
+}
+
+.navbar-badge {
+    top: 2px !important;
+    right: 2px !important;
+    padding: 2px 4px !important;
+    font-size: 0.6rem !important;
+}
+
+/* Card Styling Redesign */
+.card {
+    border: none !important;
+    border-radius: 20px !important;
+    box-shadow: var(--card-shadow) !important;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #fff !important;
+    border-bottom: 1px solid #f8f9fa !important;
+    padding: 1.5rem !important;
+}
+
+.card-title {
+    font-weight: 700 !important;
+    color: var(--dark);
+}
+
+.card-outline.card-primary {
+    border-top: 5px solid var(--primary) !important;
+}
+
+/* Buttons Styling */
+.btn {
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(191, 161, 129, 0.3);
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: 1px solid #eee;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(191, 161, 129, 0.15);
+}
+
+/* DataTables Overrides */
+.dataTables_length select,
+.dataTables_length .custom-select,
+.dataTables_length .custom-select-sm,
+.dataTables_length .form-control-sm {
+    display: inline-block !important;
+    width: auto !important;
+    margin: 0 8px !important;
+    padding: 0px 8px !important;
+    height: 32px !important;
+    border-radius: 8px !important;
+    border: 1px solid #ddd !important;
+    vertical-align: middle !important;
+}
+
+.dataTables_filter input {
+    border-radius: 10px !important;
+    padding: 5px 15px !important;
+    border: 1px solid #eee !important;
+    margin-left: 10px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: white !important;
+    border-radius: 8px;
+}
+
+/* Action Icons Only */
+.action-icons .btn {
+    width: 32px;
+    height: 32px;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+}
+
+table.dataTable thead th {
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #eee !important;
+    color: #777;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    background-color: #fbfbfb !important;
+}
+
+.content-header h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--dark);
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    background-color: #1a1a1b !important;
+    color: #e4e6eb;
+}
+
+body.dark-mode .content-wrapper {
+    background-color: #121212 !important;
+}
+
+body.dark-mode .main-sidebar {
+    background-color: #1a1a1b !important;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.dark-mode .main-header {
+    background-color: rgba(26, 26, 27, 0.85) !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+body.dark-mode .nav-link,
+body.dark-mode .brand-text,
+body.dark-mode .content-header h1,
+body.dark-mode .card-title {
+    color: #e4e6eb !important;
+}
+
+body.dark-mode .card {
+    background-color: #242526 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .card-header {
+    background-color: #242526 !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+body.dark-mode .form-control {
+    background-color: #3a3b3c !important;
+    border-color: #444 !important;
+    color: #fff !important;
+}
+
+body.dark-mode table.dataTable {
+    color: #e4e6eb !important;
+}
+
+body.dark-mode table.dataTable thead th {
+    background-color: #1a1a1b !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+body.dark-mode .dropdown-menu {
+    background-color: #242526 !important;
+    border: 1px solid #333 !important;
+}
+
+body.dark-mode .dropdown-item {
+    color: #e4e6eb !important;
+}
+
+body.dark-mode .dropdown-item:hover {
+    background-color: #3a3b3c !important;
+}
+
+body.dark-mode .dropdown-divider {
+    border-top: 1px solid #333 !important;
+}
+
+body.dark-mode .brand-link {
+    border-bottom: 1px solid #333 !important;
+}
+
+body.dark-mode .user-panel {
+    border-bottom: 1px solid #333 !important;
+}
+
+body.dark-mode .info a {
+    color: #e4e6eb !important;
+}
+
+body.dark-mode .main-footer {
+    background-color: #1a1a1b !important;
+    border-top: 1px solid #333 !important;
+    color: #888;
+}
+
+body.dark-mode .text-muted {
+    color: #999 !important;
+}

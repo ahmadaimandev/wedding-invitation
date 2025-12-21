@@ -1,0 +1,25 @@
+# General Security Settings
+Options -Indexes
+RewriteEngine On
+
+# 1. Protect specific sensitive files
+<FilesMatch "^\.env$|.*\.sql$|composer\.(json|lock)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 2. Block direct access to core folders (Internal server includes)
+# PHP's include/require will still work fine.
+RewriteRule ^(config|database|includes)/ - [F,L]
+
+# 3. Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Custom Error Pages (Optional)
+# ErrorDocument 403 /errors/403.php
+# ErrorDocument 404 /errors/404.php
