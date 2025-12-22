@@ -35,6 +35,3 @@ A premium wedding e-invitation system with guest RSVP, wishes moderation, and ad
 2. Import `/database/wedding.sql`.
 3. Configure your credentials in `.env`.
 4. Set the `BASE_URL` in `config/config.php`.
-# wedding-invitation
-# wedding-invitation
-# weeding-invitation
