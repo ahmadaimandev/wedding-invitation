@@ -1,0 +1,32 @@
+{
+    "functions": {
+        "api/**/*.php": {
+            "runtime": "vercel-php@0.7.2"
+        },
+        "**/*.php": {
+            "runtime": "vercel-php@0.7.2"
+        }
+    },
+    "routes": [
+        {
+            "src": "/(assets/.*)",
+            "dest": "/$1"
+        },
+        {
+            "src": "/(config|database|includes)/.*",
+            "status": 403
+        },
+        {
+            "src": "/\\.env",
+            "status": 403
+        },
+        {
+            "src": "/.*\\.sql",
+            "status": 403
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/$1"
+        }
+    ]
+}
