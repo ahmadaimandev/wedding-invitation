@@ -7,7 +7,7 @@ loadEnv(__DIR__ . '/../.env');
 
 // Site Settings
 define('SITE_NAME', 'Our Wedding Invitation');
-define('BASE_URL', $_ENV['BASE_URL'] ?? 'http://localhost/wedding-invitation/');
+define('BASE_URL', 'http://localhost/wedding-invitation/');
 
 // Start session if not already started
 if (session_status() == PHP_SESSION_NONE) {
