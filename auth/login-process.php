@@ -19,7 +19,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             redirect('../admin/index.php');
         }
 
-        if (password_verify($password, $user['password'])) {
+        // Support both MD5 (InfinityFree) and bcrypt (localhost) password hashing
+        $passwordValid = false;
+
+        // Check if password is MD5 hash (32 characters)
+        if (strlen($user['password']) == 32) {
+            // MD5 verification
+            $passwordValid = (md5($password) === $user['password']);
+        } else {
+            // Bcrypt verification
+            $passwordValid = password_verify($password, $user['password']);
+        }
+
+        if ($passwordValid) {
             $_SESSION['admin_id'] = $user['id'];
             $_SESSION['admin_name'] = $user['full_name'];
             $_SESSION['admin_username'] = $user['username'];
