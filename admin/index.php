@@ -205,6 +205,125 @@ if (isset($_SESSION['admin_id'])) {
                 transform: translateY(0px);
             }
         }
+
+        /* Tablet Responsive (768px - 991px) */
+        @media (max-width: 991px) and (min-width: 768px) {
+            .login-wrapper {
+                max-width: 420px;
+            }
+
+            .login-card {
+                padding: 45px 35px;
+            }
+
+            .login-title {
+                font-size: 2rem;
+            }
+
+            .brand-logo {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Mobile Responsive (max-width: 768px) */
+        @media (max-width: 768px) {
+            body {
+                height: auto;
+                min-height: 100vh;
+                padding: 20px 0;
+            }
+
+            .login-wrapper {
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .login-card {
+                padding: 40px 30px;
+                border-radius: 25px;
+            }
+
+            .brand-logo {
+                width: 65px;
+                height: 65px;
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+            }
+
+            .login-title {
+                font-size: 1.8rem;
+            }
+
+            .login-subtitle {
+                font-size: 0.75rem;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+            }
+
+            .input-group-custom label {
+                font-size: 0.7rem;
+            }
+
+            .form-control-custom {
+                padding: 12px 18px;
+                font-size: 0.9rem;
+            }
+
+            .btn-login {
+                padding: 13px;
+                font-size: 0.95rem;
+                letter-spacing: 1.5px;
+            }
+
+            .form-check-label {
+                font-size: 0.85rem;
+            }
+
+            .login-footer {
+                margin-top: 30px;
+                padding-top: 20px;
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Extra Small Mobile (max-width: 480px) */
+        @media (max-width: 480px) {
+            .login-wrapper {
+                padding: 10px;
+            }
+
+            .login-card {
+                padding: 35px 25px;
+                border-radius: 20px;
+            }
+
+            .brand-logo {
+                width: 60px;
+                height: 60px;
+                font-size: 1.4rem;
+            }
+
+            .login-title {
+                font-size: 1.6rem;
+            }
+
+            .login-subtitle {
+                font-size: 0.7rem;
+                letter-spacing: 1.5px;
+            }
+
+            .form-control-custom {
+                padding: 11px 16px;
+                font-size: 0.85rem;
+            }
+
+            .btn-login {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 

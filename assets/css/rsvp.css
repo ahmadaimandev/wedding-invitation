@@ -162,9 +162,54 @@ body {
     transform: translateY(-3px);
 }
 
-@media (max-width: 991px) {
+/* ===================================
+   COMPREHENSIVE RESPONSIVE DESIGN
+   FOR ALL DEVICES & ORIENTATIONS
+   =================================== */
+
+/* Large Tablets & iPad Pro (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .rsvp-container {
+        width: 92%;
+    }
+
     .rsvp-image {
-        min-height: 200px;
+        min-height: 280px;
+    }
+
+    .display-4 {
+        font-size: 3.2rem;
+    }
+}
+
+/* Medium Tablets (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .rsvp-image {
+        min-height: 250px;
+    }
+
+    .rsvp-container {
+        margin: 30px auto;
+        width: 95%;
+    }
+
+    .display-4 {
+        font-size: 3rem;
+    }
+
+    .rsvp-title {
+        font-size: 2.2rem;
+    }
+
+    .rsvp-form-wrapper {
+        padding: 40px 35px;
+    }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+    .rsvp-image {
+        min-height: 220px;
     }
 
     .rsvp-container {
@@ -172,6 +217,237 @@ body {
     }
 
     .display-4 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+    }
+
+    .rsvp-form-wrapper {
+        padding: 35px 30px;
+    }
+}
+
+/* Mobile Devices (577px - 767px) */
+@media (max-width: 767px) and (min-width: 577px) {
+    .rsvp-container {
+        margin: 20px auto;
+        width: 96%;
+    }
+
+    .rsvp-image {
+        min-height: 200px;
+    }
+
+    .display-4 {
+        font-size: 2.7rem !important;
+    }
+
+    .rsvp-title {
+        font-size: 2rem;
+    }
+
+    .rsvp-form-wrapper {
+        padding: 35px 28px;
+    }
+}
+
+/* Standard Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .bg-shape-1,
+    .bg-shape-2 {
+        display: none;
+    }
+
+    .rsvp-container {
+        margin: 15px auto;
+        width: 95%;
+        border-radius: 15px;
+    }
+
+    .rsvp-image {
+        min-height: 180px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .display-4 {
+        font-size: 2.5rem !important;
+    }
+
+    .rsvp-title {
+        font-size: 1.8rem;
+    }
+
+    .sub-title {
+        font-size: 0.9rem;
+    }
+
+    .rsvp-form-wrapper {
+        padding: 30px 25px;
+    }
+
+    .form-floating>.form-control,
+    .form-floating>.form-select {
+        font-size: 0.95rem;
+        padding: 12px 15px;
+    }
+
+    .form-floating>label {
+        font-size: 0.85rem;
+    }
+
+    .btn-outline-custom {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .btn-primary-custom {
+        font-size: 0.95rem;
+        padding: 12px 20px;
+    }
+
+    .login-footer {
+        margin-top: 25px;
+        padding-top: 20px;
+    }
+}
+
+/* Mobile Landscape (481px - 767px in landscape) */
+@media (max-width: 767px) and (min-width: 481px) and (orientation: landscape) {
+    .rsvp-container {
+        margin: 15px auto;
+    }
+
+    .rsvp-image {
+        min-height: 160px;
+    }
+
+    .display-4 {
+        font-size: 2.3rem !important;
+    }
+
+    .rsvp-form-wrapper {
+        padding: 25px 30px;
+    }
+
+    .form-floating>.form-control,
+    .form-floating>.form-select {
+        padding: 10px 14px;
+    }
+}
+
+/* Small Mobile (376px - 480px) */
+@media (max-width: 480px) and (min-width: 376px) {
+    .rsvp-container {
+        width: 96%;
+        margin: 12px auto;
+        border-radius: 12px;
+    }
+
+    .rsvp-image {
+        min-height: 160px;
+    }
+
+    .display-4 {
+        font-size: 2.2rem !important;
+    }
+
+    .rsvp-title {
+        font-size: 1.6rem;
+    }
+
+    .rsvp-form-wrapper {
+        padding: 28px 22px;
+    }
+}
+
+/* Extra Small Mobile (max-width: 375px) */
+@media (max-width: 375px) {
+    .rsvp-container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .rsvp-image {
+        min-height: 150px;
+        border-radius: 0;
+    }
+
+    .display-4 {
+        font-size: 2rem !important;
+    }
+
+    .rsvp-title {
+        font-size: 1.5rem;
+    }
+
+    .sub-title {
+        font-size: 0.8rem;
+    }
+
+    .rsvp-form-wrapper {
+        padding: 25px 20px;
+    }
+
+    .form-floating>.form-control,
+    .form-floating>.form-select {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+
+    .btn-primary-custom {
+        font-size: 0.9rem;
+        padding: 12px 18px;
+    }
+}
+
+/* Foldable Devices & Galaxy Fold (280px - 375px) */
+@media (max-width: 320px) {
+    .rsvp-container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .rsvp-image {
+        min-height: 130px;
+    }
+
+    .display-4 {
+        font-size: 1.8rem !important;
+    }
+
+    .rsvp-title {
+        font-size: 1.3rem;
+    }
+
+    .sub-title {
+        font-size: 0.7rem;
+    }
+
+    .rsvp-form-wrapper {
+        padding: 20px 15px;
+    }
+
+    .form-floating>.form-control,
+    .form-floating>.form-select {
+        font-size: 0.85rem;
+        padding: 9px 10px;
+    }
+
+    .form-floating>label {
+        font-size: 0.75rem;
+    }
+
+    .btn-outline-custom {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    .btn-primary-custom {
+        font-size: 0.85rem;
+        padding: 10px 15px;
     }
 }

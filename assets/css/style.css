@@ -75,6 +75,24 @@ body {
     background-color: var(--secondary-color);
     overflow-x: hidden;
     line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Prevent any overflow issues */
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Ensure containers don't cause empty space */
+.container,
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1,
@@ -114,6 +132,27 @@ h6 {
     backdrop-filter: blur(10px);
     padding: 15px 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Hide hamburger on desktop */
+.navbar-toggler {
+    border: none;
+    padding: 8px 12px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Ensure navigation is visible on desktop */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex !important;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
 }
 
 .nav-link {
@@ -482,8 +521,132 @@ footer {
     opacity: 1;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
+/* ===================================
+   COMPREHENSIVE RESPONSIVE DESIGN
+   FOR ALL DEVICES & ORIENTATIONS
+   =================================== */
+
+/* Large Tablets & iPad Pro (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .hero-title {
+        font-size: 6rem;
+    }
+
+    .section-header h2 {
+        font-size: 3.2rem;
+    }
+
+    section {
+        padding: 100px 0;
+    }
+
+    .couple-img-wrapper {
+        height: 500px;
+    }
+}
+
+/* Medium Tablets (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .hero-title {
+        font-size: 5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 4px;
+    }
+
+    .hero-date {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+
+    .section-header h2 {
+        font-size: 3rem;
+    }
+
+    .section-header .sub {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    .couple-img-wrapper {
+        height: 450px;
+        border-radius: 300px 300px 0 0;
+    }
+
+    .couple-text h3 {
+        font-size: 2rem;
+    }
+
+    .countdown-item {
+        margin: 0 25px;
+    }
+
+    .countdown-number {
+        font-size: 4rem;
+    }
+
+    .event-card {
+        padding: 50px 30px;
+    }
+
+    .rsvp-cta-card {
+        padding: 60px 40px;
+    }
+
+    .wish-card {
+        width: 320px;
+    }
+
+    .gallery-item-scroll {
+        width: 280px;
+        height: 380px;
+    }
+}
+
+/* Tablet Landscape (768px - 1024px in landscape) */
+@media (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 0;
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .countdown-section {
+        padding: 60px 0;
+    }
+
+    .countdown-item {
+        margin: 0 20px;
+    }
+
+    .countdown-number {
+        font-size: 3.5rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}
+
+/* Mobile Devices (577px - 767px) */
+@media (max-width: 767px) and (min-width: 577px) {
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.6rem !important;
+    }
+
     .hero-title {
         font-size: 4rem;
     }
@@ -494,20 +657,129 @@ footer {
     }
 
     .section-header h2 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 
-    .countdown-item {
-        margin: 10px 15px;
+    .section-header .sub {
+        font-size: 2rem;
+    }
+
+    .couple-img-wrapper {
+        height: 380px;
+        border-radius: 190px 190px 0 0;
     }
 
     .countdown-number {
         font-size: 3rem;
     }
 
+    .wish-card {
+        width: 300px;
+    }
+
+    .gallery-item-scroll {
+        width: 270px;
+        height: 360px;
+    }
+}
+
+/* Standard Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem !important;
+    }
+
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link {
+        margin: 5px 0;
+        padding: 10px 15px !important;
+    }
+
+    /* Hero Section */
+    .hero-title {
+        font-size: 3.5rem;
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-date {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        padding: 10px 25px;
+    }
+
+    /* Sections */
+    section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .section-header .sub {
+        font-size: 1.8rem;
+    }
+
+    /* Couple Section */
     .couple-img-wrapper {
-        height: 400px;
-        border-radius: 200px 200px 0 0;
+        height: 350px;
+        border-radius: 175px 175px 0 0;
+        margin-bottom: 20px;
+    }
+
+    .couple-text {
+        padding: 20px;
+    }
+
+    .couple-text h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Countdown */
+    .countdown-section {
+        padding: 80px 0;
+    }
+
+    .countdown-item {
+        margin: 10px 15px;
+        display: inline-block;
+    }
+
+    .countdown-number {
+        font-size: 2.5rem;
+    }
+
+    .countdown-label {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    /* Story Timeline */
+    .story-row {
+        margin-bottom: 50px;
     }
 
     .story-item,
@@ -516,14 +788,179 @@ footer {
         border-right: none;
         border-left: 2px solid var(--primary-color);
         margin: 0 0 30px 20px;
-        padding-left: 30px;
+        padding: 20px 0 20px 25px;
     }
 
     .story-item::before,
     .story-item.right::before {
         left: -11px;
-
         right: auto;
+    }
+
+    .story-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .story-img {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    /* Events */
+    .event-card {
+        padding: 40px 25px;
+        margin-bottom: 20px;
+    }
+
+    .event-icon {
+        font-size: 2.5rem;
+    }
+
+    .event-card h4 {
+        font-size: 1.5rem;
+    }
+
+    /* Gallery & Wishes */
+    .wish-card {
+        width: 280px;
+        padding: 25px;
+    }
+
+    .gallery-item-scroll {
+        width: 250px;
+        height: 350px;
+    }
+
+    .marquee-container {
+        padding: 15px 0;
+    }
+
+    /* RSVP CTA */
+    .rsvp-cta-card {
+        padding: 40px 30px;
+    }
+
+    .rsvp-cta-card h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 50px 0 40px;
+    }
+
+    .footer-names {
+        font-size: 1.5rem;
+    }
+
+    /* Back to Top */
+    #backToTop {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Landscape (481px - 767px in landscape) */
+@media (max-width: 767px) and (min-width: 481px) and (orientation: landscape) {
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding: 60px 0;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .countdown-section {
+        padding: 50px 0;
+    }
+
+    .countdown-item {
+        margin: 0 12px;
+    }
+
+    .countdown-number {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .couple-img-wrapper {
+        height: 300px;
+    }
+}
+
+/* Extra Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-date {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-header .sub {
+        font-size: 1.5rem;
+    }
+
+    .countdown-item {
+        margin: 5px 10px;
+    }
+
+    .countdown-number {
+        font-size: 2rem;
+    }
+
+    .countdown-label {
+        font-size: 0.65rem;
+    }
+
+    .couple-img-wrapper {
+        height: 300px;
+    }
+
+    .wish-card {
+        width: 260px;
+        padding: 20px;
+    }
+
+    .gallery-item-scroll {
+        width: 220px;
+        height: 300px;
+    }
+
+    .rsvp-cta-card {
+        padding: 30px 20px;
+    }
+
+    .rsvp-cta-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 25px;
     }
 }
 
